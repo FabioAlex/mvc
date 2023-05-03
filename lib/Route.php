@@ -5,11 +5,20 @@ namespace Lib;
 class Route
 {
     private $routes = [
-        /* 'contact' => function(){
 
-        },
-        'about' => function(){
-            
-        }, */
+        'GET' => [
+            'contact' => function(){
+
+            },
+            'about' => function(){
+                
+            },
+        ],
+
+        'POST' =>[
+
+        ]
+
+        /*  */
     ];
 }
