@@ -4,21 +4,15 @@ namespace Lib;
 
 class Route
 {
-    private $routes = [
+    private static $routes = [];
 
-        'GET' => [
-            'contact' => function(){
+    public static function get($uri, $callback)
+    {
+        self::$routes['GET'][$uri] = $callback;
+    }
 
-            },
-            'about' => function(){
-                
-            },
-        ],
-
-        'POST' =>[
-
-        ]
-
-        /*  */
-    ];
+    public function post($uri, $callback)
+    {
+        self::$routes['POST'][$uri] = $callback;
+    }
 }
