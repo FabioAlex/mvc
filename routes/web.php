@@ -4,9 +4,7 @@ use Lib\Route;
 
 use App\Controllers\HomeController;
 
-Route::get('/', function () {
-    return HomeController::class;
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/contact', function () {
     return 'Hola desde la página de contacto';
